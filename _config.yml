@@ -1,0 +1,20 @@
+# Site settings
+title: 'Andrea Peretti'
+email: peretti.and@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Portfolio di uno studente della laurea magistrale in <strong>Realtà Virtuale e Multimedialità</strong> 
+  presso il <strong>Dipartimento di Informatica</strong> dell'<strong>Università degli Studi di Torino</strong>.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.andxet.com" # the base hostname & protocol for your site
+twitter_username: andxet
+github_username:  andxet
+
+# Build settings
+markdown: kramdown
+
+-gravatar
+    baseurl: "http://www.gravatar.com/avatar/"
+    mail_hash: "d006be17f2850c443a9de60ecc428bec"
+
+#gravatar_baseurl: "http://www.gravatar.com/avatar/"
+#gravatar_mail_hash: "d006be17f2850c443a9de60ecc428bec"
