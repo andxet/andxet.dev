@@ -17,7 +17,8 @@
     border-style: solid;
     border-color: $grey-color-light;
     box-shadow: 1px 1px 5px $grey-color-dark;
-    vertical-align: -16px;
+    display: inline-block;
+    //vertical-align: -16px;
 }
 
 .site-title {
