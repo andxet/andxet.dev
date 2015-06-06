@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: portfolio
 permalink: /
 ---
 Ciao, sono uno studente universitario e mi piace programmare.

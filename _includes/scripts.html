@@ -1,11 +1,29 @@
-<script type="text/javascript" src='/headroom.min.js'></script>
-
+<script type="text/javascript" src='/js/headroom.min.js'></script>
+<script type="text/javascript" src='/js/jquery-2.1.4.min.js'></script>
+<script type="text/javascript" src='/js/mustache.min.js'></script>
 <script type="text/javascript">
-// grab an element
+/* grab an element
 var myElement = document.querySelector("site-header");
 console.log(myElement)
 // construct an instance of Headroom, passing the element
 var headroom  = new Headroom(myElement);
 // initialise
-headroom.init(); 
+headroom.init(); */
+function loadRepos(){
+  var x;
+  $.getJSON('https://bitbucket.org/api/1.0/users/andxet', function(data) {
+    var repos = data["repositories"]
+    for (i=0; i < data["repositories"].length; i++){
+        var r=data["repositories"][i]
+        l = r['logo']
+        if (l.includes("language-avatars/")){
+            r["logo"] = l.replace("16.png", "64.png")
+        }
+    }
+    var template = $('#template').html();
+    Mustache.parse(template);   // optional, speeds up future uses
+    var rendered = Mustache.render(template, {"repositories": data["repositories"]});
+    $('#target').html(rendered);
+  });
+}
 </script>
