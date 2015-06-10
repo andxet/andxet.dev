@@ -11,10 +11,8 @@ github_username:  andxet
 
 # Build settings
 markdown: kramdown
-
-#gravatar: #{{gravatar.attributo}} non funge...
-#    baseurl: "http://www.gravatar.com/avatar/"
-#    mail_hash: "d006be17f2850c443a9de60ecc428bec"
+sass:
+    style: :compressed
 
 gravatar_baseurl: "http://www.gravatar.com/avatar/"
 gravatar_mail_hash: "d006be17f2850c443a9de60ecc428bec"

@@ -1,6 +1,7 @@
-<script type="text/javascript" src='/js/headroom.min.js'></script>
+<!--<script type="text/javascript" src='/js/headroom.min.js'></script>-->
 <script type="text/javascript" src='/js/jquery-2.1.4.min.js'></script>
-<script type="text/javascript" src='/js/mustache.min.js'></script>
+<!--<script type="text/javascript" src='/js/mustache.min.js'></script>-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
 <script type="text/javascript">
 /* grab an element
 var myElement = document.querySelector("site-header");
@@ -9,7 +10,7 @@ console.log(myElement)
 var headroom  = new Headroom(myElement);
 // initialise
 headroom.init(); */
-function loadRepos(){
+/*function loadReposMustache(){
   var x;
   $.getJSON('https://bitbucket.org/api/1.0/users/andxet', function(data) {
     var repos = data["repositories"]
@@ -23,6 +24,36 @@ function loadRepos(){
     var template = $('#template').html();
     Mustache.parse(template);   // optional, speeds up future uses
     var rendered = Mustache.render(template, {"repositories": data["repositories"]});
+    $('#target').html(rendered);
+  });
+}*/
+
+function loadRepos(){
+  var x;
+  var res = 128;
+
+  $.getJSON('https://bitbucket.org/api/1.0/users/andxet', function(data) {
+    var repos = data["repositories"]
+    //Modifico i link ai logo, prendendo quelli ad una risoluzione più alta
+    for (i=0; i < repos.length; i++){
+        var r=repos[i]
+        l = r['logo']
+        if (l.includes("language-avatars/")){
+            r["logo"] = l.replace("16.png", res+".png")
+        }
+    }
+    console.log(repos)
+    //Costruisco le righe
+    var rows=[];
+    var step=3;
+    for(i=0; i<repos.length ; i+=step){
+        rows.push({repo: repos.slice(i,i+step)});
+    };
+       
+    console.log(rows)
+    var source = $('#project-template').html();
+    var template = Handlebars.compile(source);
+    var rendered = template({"rows": rows});
     $('#target').html(rendered);
   });
 }
