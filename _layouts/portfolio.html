@@ -2,35 +2,40 @@
 layout: default
 ---
 {% include scripts.html %}
-<div class="post">
+<!--<div class="post">
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
   <article class="post-content">
     <!--{{ content }}-->
-  </article>
+  <!--</article>-->
 
+  <!--
   <div class="jumbotron">
       <div class="container">
           <div class="col-md-3 pagination-center" >
                 <img class="author-image-big" src="{{ site.gravatar_baseurl }}{{ site.gravatar_mail_hash }}.png?s=150" />
           </div>
           <div class="col-md-9">
-              <h1>{{site.data.user.name}} {{site.data.user.surname}} <small>{{site.data.user.profession}}</h1>
+              <h1>{{site.data.user.name}} {{site.data.user.surname}} <small>{{site.data.user.profession}}</small></h1>
           </div>
       </div>
   </div>
+-->
 
-  <div class="" id="target"><p class="text-center">Caricamento progetti...</p></div>
+  <div class="container marketing">
+    <p class="text-center">L'elenco dei progetti viene generato dal profilo di BitBucket.</p>
+    <span id="projects"><p class="text-center">Caricamento progetti...</p></span>
+  </div>
   <script id="project-template" type="text/x-handlebars-template">
   {% raw %}
       {{#rows}}
       <div class="row">
         {{#this.repo}}
-            <div class="col-md-4 col-sm-4">
-                <img class="project-logo" src='{{logo}}' />
-                <a class="project-name" href='https://bitbucket.org/andxet/{{slug}}' target="_blank"><h2>{{name}}</h2></a>
+            <div class="col-md-4">
+                <img class="img-circle" src='{{logo}}' />
+                <h2><a class="project-name" href='https://bitbucket.org/andxet/{{slug}}' target="_blank">{{name}}</a></h2>
                 <p class="projet-description">{{description}}</p>
             </div>
         {{/this.repo}}
@@ -41,4 +46,4 @@ layout: default
   <script type="text/javascript">
       loadRepos();
   </script>
-</div>
+<!--</div>-->

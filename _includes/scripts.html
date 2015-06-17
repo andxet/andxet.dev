@@ -37,24 +37,23 @@ function loadRepos(){
     //Modifico i link ai logo, prendendo quelli ad una risoluzione più alta
     for (i=0; i < repos.length; i++){
         var r=repos[i]
-        l = r['logo']
-        if (l.includes("language-avatars/")){
-            r["logo"] = l.replace("16.png", res+".png")
+        var l = String(r['logo'])
+        
+        if (l.indexOf("/16/?ts") > -1){//Contains non funge su safari
+            r["logo"] = l.replace("/16/", "/"+res+"/")
         }
     }
-    console.log(repos)
     //Costruisco le righe
     var rows=[];
     var step=3;
     for(i=0; i<repos.length ; i+=step){
         rows.push({repo: repos.slice(i,i+step)});
     };
-       
-    console.log(rows)
-    var source = $('#project-template').html();
+    
+    var source = $('#project-template').html();//elemento in cui verranno inseriti i progetti
     var template = Handlebars.compile(source);
     var rendered = template({"rows": rows});
-    $('#target').html(rendered);
+    $('#projects').html(rendered);
   });
 }
 </script>

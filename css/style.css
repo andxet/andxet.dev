@@ -1,0 +1,25 @@
+/*Marketing*/
+div.marketing .col-md-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+div.marketing h2 {
+  font-weight: normal;
+}
+div.marketing .col-md-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/**/
+#projects {
+  border-top: 30px;
+}
+
+/*navbar*/
+navbar .img-circle{
+  border-style: solid;
+  border-color: #878181;
+  box-shadow: 1px 1px 5px #484848;
+  /*vertical-align: -11px;*/
+}
