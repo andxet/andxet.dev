@@ -25,8 +25,8 @@ layout: default
 -->
 
   <div class="container marketing">
-    <p class="text-center">L'elenco dei progetti viene generato dal profilo di BitBucket.</p>
-    <span id="projects"><p class="text-center">Caricamento progetti...</p></span>
+    <p class="text-center">Visualizza l'elenco dei miei progetti su <a href="{{ site.data.user.bitbucket }}"><i class="fa fa-bitbucket"></i> BitBucket</a></p>
+    <div id="projects"><p class="text-center">Caricamento progetti...</p></div>
   </div>
   <script id="project-template" type="text/x-handlebars-template">
   {% raw %}
@@ -37,6 +37,9 @@ layout: default
                 <img class="img-circle" src='{{logo}}' />
                 <h2><a class="project-name" href='https://bitbucket.org/andxet/{{slug}}' target="_blank">{{name}}</a></h2>
                 <p class="projet-description">{{description}}</p>
+                <a href='https://bitbucket.org/andxet/{{slug}}' class="btn btn-primary">
+                    <i class="fa fa-bitbucket fa-inverse"></i> visualizza »
+                </a>
             </div>
         {{/this.repo}}
       </div>

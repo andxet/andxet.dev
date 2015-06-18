@@ -11,15 +11,32 @@ div.marketing .col-md-4 p {
   margin-left: 10px;
 }
 
+div.marketing .col-md-4{
+  padding: 20px;
+}
+
+div.marketing .col-md-4:hover {
+  background-color: #eee;
+  border-radius: 15px;
+}
+
 /**/
 #projects {
-  border-top: 30px;
+  margin-top: 30px;
 }
 
 /*navbar*/
-navbar .img-circle{
+.navbar{
+  border-top: 5px solid red;
+  height: 100px;
+  vertical-align: middle;
+}
+
+nav .img-circle{
   border-style: solid;
-  border-color: #878181;
+  border-width: 3px;
+  border-color: #ffae00;
   box-shadow: 1px 1px 5px #484848;
   /*vertical-align: -11px;*/
 }
+

@@ -34,6 +34,7 @@ function loadRepos(){
 
   $.getJSON('https://bitbucket.org/api/1.0/users/andxet', function(data) {
     var repos = data["repositories"]
+    console.log(repos)
     //Modifico i link ai logo, prendendo quelli ad una risoluzione più alta
     for (i=0; i < repos.length; i++){
         var r=repos[i]
