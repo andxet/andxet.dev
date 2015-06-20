@@ -1,13 +1,30 @@
 <footer class="footer">
 
   <div class="container">
-    <p class="text-center">
-      <a href="https://github.com/{{ site.github_username }}">
-        <i class="fa fa-github fa-3x"></i>
+    <p class="text-center" id="social">
+    {{if site.data.user.github}}
+      <a href="{{ site.data.user.github }}" target="_blank">
+        <i class="fa fa-github fa-2x"></i>
       </a>
-      <a href="https://github.com/{{ site.github_username }}">
-        <i class="fa fa-github fa-3x"></i>
+    {{endif}}
+
+    {{if site.data.user.bitbucket }}
+      <a href="{{ site.data.user.bitbucket }}" target="_blank">
+        <i class="fa fa-bitbucket fa-2x"></i>
       </a>
+    {{ endif }}
+
+    {{if site.data.user.twitter }}
+      <a href="{{ site.data.user.twitter }}" target="_blank">
+        <i class="fa fa-twitter fa-2x"></i>
+      </a>
+    {{ endif }}
+
+    {{if site.data.user.linkedin }}
+      <a href="{{ site.data.user.linkedin }}" target="_blank">
+        <i class="fa fa-linkedin fa-2x"></i>
+      </a>
+    {{ endif }}
     </p>
          
     <div>
