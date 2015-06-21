@@ -50,6 +50,11 @@ div.marketing .col-md-4:hover {
   font-size:10px;
 }
 
+.navbar .container{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 nav .img-circle{
   border-style: solid;
   border-width: 3px;
