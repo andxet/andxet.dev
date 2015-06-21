@@ -51,8 +51,9 @@ div.marketing .col-md-4:hover {
 }
 
 .navbar .container{
-    padding-left: 50px;
-    padding-right: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 925px;
 }
 
 nav .img-circle{
