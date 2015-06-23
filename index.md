@@ -1,5 +1,4 @@
 ---
-title: Bio
 permalink: /
 layout: presentazione
 ---
