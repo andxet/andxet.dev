@@ -68,6 +68,10 @@ nav .img-circle{
     padding: 3px;
 }
 
+h1.nameandprof {
+    margin-bottom: 1em;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -85,6 +89,10 @@ body {
   /* Set the fixed height of the footer here */
   height: 69px;
   /*background-color: #f5f5f5;*/
+}
+
+.iubenda-ibadge {
+  vertical-align: middle;
 }
 
 

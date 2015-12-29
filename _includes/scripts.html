@@ -13,8 +13,8 @@ function loadRepos(){
         var r=repos[i]
         var l = String(r['logo'])
         
-        if (l.indexOf("/16/?ts") > -1){//Contains non funge su safari
-            r["logo"] = l.replace("/16/", "/"+res+"/")
+        if (l.indexOf("/32/?ts") > -1){//Contains non funge su safari
+            r["logo"] = l.replace("/32/", "/"+res+"/")
         }
     }
     //Costruisco le righe

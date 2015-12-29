@@ -1,4 +1,4 @@
 ---
 layout: portfolio
-permalink: /projects/
+permalink: /projects
 ---
