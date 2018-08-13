@@ -9,7 +9,8 @@
                 </div>
             </div>
             <div class="row">
-                {% for project in site.projects %}
+                {% assign items = site.projects | sort: 'date' | reverse %}
+                {% for project in items %}
                     <div class="col-sm-4 portfolio-item">
                         <a href="#portfolioModal-{{ project.modal-id }}" class="portfolio-link" data-toggle="modal">
                             <div class="caption">
