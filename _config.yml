@@ -3,7 +3,7 @@ title: Andrea Peretti
 email: peretti.and@gmail.com
 url: http://www.andxet.com
 baseurl: /newsite-test
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "Virtual / Augmented Reality Developer based in Italy."
 keywords: "Andrea Peretti, Virtual Reality, Turin, Developer, portfolio, programmer, C++, C#, Unity 3D"
 skills: "Virtual / Augmented Reality Developer"
 meta_author: Peretti Andrea
@@ -58,4 +58,14 @@ credits: 'Created by Andrea Peretti<br>with <a href="https://jekyllrb.com/">Jeky
 markdown: kramdown
 permalink: pretty
 
-exclude: [old]
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+exclude:
+  - old
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.txt
+  - README.txt
