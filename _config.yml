@@ -1,12 +1,12 @@
 # Site settings
-title: Freelancer
-email: your-email@domain.com
-url: https://example.github.io
+title: Andrea Peretti
+email: peretti.and@gmail.com
+url: http://www.andxet.com
 baseurl: /newsite-test
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-keywords: "your keywords, separated by commas"
-skills: "Web Developer - Graphic Artist - User Experience Designer"
-meta_author: LastName FirstName
+keywords: "Andrea Peretti, Virtual Reality, Turin, Developer, portfolio, programmer, C++, C#, Unity 3D"
+skills: "[Virtual | Augmented] Reality Developer"
+meta_author: Peretti Andrea
 
 # Google webmaster tools
 google_verify:
@@ -33,7 +33,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
+  copyright: Andrea Peretti
   location: Location
   social: Around the Web
   credits: Credits
@@ -53,8 +53,8 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Via Statale 31
+  - line: Roasio (VC), Italy
 
 # Credits content
 credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
