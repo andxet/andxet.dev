@@ -15,6 +15,11 @@
     <!-- Google verification -->
     {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
 
+
+    {% include cookieconsent.html %}
+
+    {% include google_analytics.html %}
+
     <!-- Bing Verification -->
     {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
 
