@@ -1,38 +1,52 @@
-<footer class="footer">
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>{{ site.footer.location }}</h3>
+                        <p>
+                            {% for adress in site.address %}
+                                {{ adress.line }} <br>
+		                    {% endfor %}
+                        </p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>{{ site.footer.social }}</h3>
+                        <ul class="list-inline">
+                            {% for network in site.social %}
+                            <li>
+                                <a href="{{ network.url }}" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                            </li>
+		                    {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>{{ site.footer.credits }}</h3>
+                        <p>{{ site.credits }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row form-group">
+                    <div class="col-lg-12">
+                        Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }} - <a href="{{ site.privacy-policy }}" target="_blank">Privacy Policy</a>
+                    </div>
+                </div>
+                <!--<div class="row form-group">
+                    <div class="col-lg-12">
+                        {{ site.privacy_policy_button }}
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </footer>
 
-  <div class="container">
-    <p class="text-center" id="social">
-    {{if site.data.user.github}}
-      <a href="{{ site.data.user.github }}" target="_blank">
-        <i class="fa fa-github fa-2x"></i>
-      </a>
-    {{endif}}
-
-    {{if site.data.user.bitbucket }}
-      <a href="{{ site.data.user.bitbucket }}" target="_blank">
-        <i class="fa fa-bitbucket fa-2x"></i>
-      </a>
-    {{ endif }}
-
-    {{if site.data.user.twitter }}
-      <a href="{{ site.data.user.twitter }}" target="_blank">
-        <i class="fa fa-twitter fa-2x"></i>
-      </a>
-    {{ endif }}
-
-    {{if site.data.user.linkedin }}
-      <a href="{{ site.data.user.linkedin }}" target="_blank">
-        <i class="fa fa-linkedin fa-2x"></i>
-      </a>
-    {{ endif }}
-    </p>
-         
-    <div>
-      <p class="text-center">
-        Realizzato con <a href="http://jekyllrb.com" target="_blank">Jekyll</a> - &copy; Andrea Peretti 2015 - {{ site.data.user.privacy_policy_button }}
-      </p>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
     </div>
-
-  </div>
-
-</footer>

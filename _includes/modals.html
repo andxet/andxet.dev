@@ -1,0 +1,58 @@
+ <!-- Portfolio Modals -->
+ {% for project in site.projects %}
+    <div class="portfolio-modal modal fade" id="portfolioModal-{{ project.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>{{ project.name }}</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/{{ project.img }}" class="img-responsive img-centered" alt="{{ project.alt }}">
+                            {% if project.description %}
+                                <p>{{ project.description }}</p>
+                            {% endif %}
+                            <ul class="list-inline item-details">
+                                {% if project.client %}
+                                    <li>Client:
+                                        <strong>{{ project.client }}
+                                        </strong>
+                                    </li>
+                                {% endif %}
+                                {% if project.project-date %}
+                                    <li>Date:
+                                        <strong>{{ project.project-date }}
+                                        </strong>
+                                    </li>
+                                {% endif %}
+                                {% if project.category %}
+                                    <li>Type:
+                                        <strong>{{ project.category }}
+                                        </strong>
+                                    </li>
+                                {% endif %}
+                                <!-- Insert tags here -->
+                            </ul>
+                            {% if project.links %}
+                                <ul class="list-inline">
+                                    {% for link in project.links %}
+                                    <li>
+                                        <a href="{{ link.url }}" target="_blank" title="{{ link.alt }}"><i class="fa fa-fw fa-{{ link.title }} fa-3x"></i></a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

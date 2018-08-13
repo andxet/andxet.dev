@@ -1,15 +1,73 @@
 # Site settings
-title: 'Andrea Peretti'
+title: Andrea Peretti
 email: peretti.and@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Portfolio di uno studente della laurea magistrale in <strong>Realtà Virtuale e Multimedialità</strong> 
-  presso il <strong>Dipartimento di Informatica</strong> dell&rsquo;<strong>Universit&agrave; degli Studi di Torino</strong>.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.andxet.com" # the base hostname & protocol for your site
-twitter_username: andxet
-github_username:  andxet
+url: http://www.andxet.com
+baseurl: /newsite-test
+description: "Virtual / Augmented Reality Developer based in Italy."
+keywords: "Andrea Peretti, Virtual Reality, Turin, Developer, portfolio, programmer, C++, C#, Unity 3D"
+skills: "Virtual / Augmented Reality Developer"
+meta_author: Peretti Andrea
+gravatar_mail_hash: "d006be17f2850c443a9de60ecc428bec"
+
+# Google webmaster tools
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+#bing_verify:
+
+# Contact form:
+# - static : pass through formspree.io to validate email sending
+# - disqus : replace contact form by disqus thread
+# - comment the line below if you want to stick with the default PHP contact form
+contact: static
+
+# If you use disqus you need disqus shortname
+# https://help.disqus.com/customer/portal/articles/466208
+#disqus_shortname: myshortname
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: 6987C9
+  primary-rgb: "105,135,201"
+  secondary: 2c3e50
+  secondary-dark: 233140
+
+# Footer settings
+footer:
+  copyright: Andrea Peretti
+  location: Location
+  social: Around the Web
+  credits: Credits
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: linkedin
+    url: https://www.linkedin.com/in/andreaperetti/
+  - title: github
+    url: http://github.com/andxet
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Via Statale 31
+  - line: Roasio (VC), Italy
+
+# Credits content
+credits: 'Created by Andrea Peretti<br>with <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/jeromelachaud/freelancer-theme">Freelancer</a> template.'
 
 # Build settings
 markdown: kramdown
-sass:
-    style: :compressed
+permalink: pretty
+
+collections:
+  - projects
+
+exclude:
+  - old
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.txt
+  - README.txt
+  - raw
+
+#privacy_policy_button: '<a href="//www.iubenda.com/privacy-policy/7769344" class="iubenda-white iubenda-embed" title="Privacy Policy">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>'
+privacy-policy: "https://privacypolicies.com/privacy/view/827ff3ec3134a025c3a9f21bb4be86ae"
