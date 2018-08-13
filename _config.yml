@@ -59,9 +59,7 @@ markdown: kramdown
 permalink: pretty
 
 collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
+  - projects
 
 exclude:
   - old
