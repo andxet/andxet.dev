@@ -67,3 +67,4 @@ exclude:
   - Gemfile.lock
   - LICENSE.txt
   - README.txt
+  - raw
