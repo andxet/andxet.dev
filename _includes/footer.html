@@ -30,11 +30,16 @@
         </div>
         <div class="footer-below">
             <div class="container">
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-lg-12">
-                        Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }}
+                        Copyright &copy; {{ site.footer.copyright }} 20{{ site.time | date: '%y' }} - <a href="{{ site.privacy-policy }}" target="_blank">Privacy Policy</a>
                     </div>
                 </div>
+                <!--<div class="row form-group">
+                    <div class="col-lg-12">
+                        {{ site.privacy_policy_button }}
+                    </div>
+                </div>-->
             </div>
         </div>
     </footer>
