@@ -6,3 +6,18 @@
 .top-space-30 {margin-top: 30px;}
 .top-space-40 {margin-top: 40px;}
 .top-space-50 {margin-top: 50px;}
+
+.occupation {
+    font-weight: 300;
+    font-size: 1.75em;
+}
+
+.occupation a:link, .occupation a:visited{
+    text-decoration: underline;
+    color: white;
+}
+
+.occupation a:hover, .occupation a:active{
+    text-decoration: underline;
+    color: red;
+}

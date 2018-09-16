@@ -12,6 +12,9 @@
                         <span class="name">{{ site.title }}</span>
                         <hr class="star-light">
                         <span class="skills">{{ site.skills }}</span>
+                        {%if site.occupation != null %}
+                            <br><span class="occupation">at <a href="{{ site.occupation.link }}" target="_blank">{{ site.occupation.name }}</a></span>
+                        {% endif %}
                     </div>
                 </div>
             </div>
