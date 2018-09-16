@@ -21,3 +21,22 @@
     text-decoration: underline;
     color: red;
 }
+
+.portfolio-item p {
+    text-align: center;
+}
+
+.portfolio-item i {
+    margin-top: 10px;
+}
+
+.portfolio-image {
+    position: relative;
+}
+
+.tech-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 33%;
+}

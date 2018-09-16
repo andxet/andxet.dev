@@ -15,6 +15,13 @@
                         <a href="#portfolioModal-{{ project.modal-id }}" class="portfolio-link" data-toggle="modal">
                             <div class="caption">
                                 <div class="caption-content">
+                                    <p>{{ project.name }}</p>
+                                    {% if project.category %}
+                                        <p class="small">{{ project.category }}</p>
+                                    {% endif %}
+                                    <!--{% if project.project-date %}
+                                        <p class="small">{{ project.project-date }}</p>
+                                    {% endif %}-->
                                     <i class="fa fa-search-plus fa-3x"></i>
                                 </div>
                             </div>
