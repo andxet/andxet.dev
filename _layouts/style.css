@@ -7,6 +7,7 @@
 .top-space-40 {margin-top: 40px;}
 .top-space-50 {margin-top: 50px;}
 
+/* occupation +/
 .occupation {
     font-weight: 300;
     font-size: 1.75em;
@@ -20,6 +21,11 @@
 .occupation a:hover, .occupation a:active{
     text-decoration: underline;
     color: red;
+}
+
+/*Portfolio*/
+.portfolio-item a:link, .occupation a:visited, .occupation a:hover, .occupation a:active{
+    text-decoration: none;
 }
 
 .portfolio-item p {
