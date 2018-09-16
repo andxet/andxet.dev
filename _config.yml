@@ -51,8 +51,8 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Via Statale 31
-  - line: Roasio (VC), Italy
+  - line: Turin (TO)
+  - line: 10131, Italy
 
 # Credits content
 credits: 'Created by Andrea Peretti<br>with <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/jeromelachaud/freelancer-theme">Freelancer</a> template.'
