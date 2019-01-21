@@ -3,12 +3,12 @@ title: Andrea Peretti
 email: peretti.and@gmail.com
 url: http://www.andxet.com
 #baseurl: /newsite-test
-description: "Virtual / Augmented Reality Developer based in Italy."
-keywords: "Andrea Peretti, Virtual Reality, Turin, Developer, portfolio, programmer, C++, C#, Unity 3D"
-skills: "Virtual / Augmented Reality Developer"
+description: "C++ Unreal Engine Developer based in Italy."
+keywords: "Andrea Peretti, Virtual Reality, Unreal Engine, Developer, portfolio, programmer, C++, C#, Unity 3D, Unreal"
+skills: "C++ Unreal Engine Developer"
 occupation:
-  name: Illogic srl.
-  link: http://www.illogic.xyz
+  name: ZURU Tech
+  link: https://zuru.tech/
 meta_author: Peretti Andrea
 gravatar_mail_hash: "d006be17f2850c443a9de60ecc428bec"
 
@@ -51,8 +51,8 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Turin (TO)
-  - line: 10131, Italy
+  - line: Modena (MO)
+  - line: 41121, Italy
 
 # Credits content
 credits: 'Created by Andrea Peretti<br>with <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/jeromelachaud/freelancer-theme">Freelancer</a> template.'
