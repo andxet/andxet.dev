@@ -1,5 +1,6 @@
 # Gatsby Starter: Mate
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c5dcbd22-9afb-44c2-8670-78eca503055f/deploy-status)](https://app.netlify.com/sites/boring-hoover-3a843c/deploys)
 [![Greenkeeper badge](https://badges.greenkeeper.io/EmaSuriano/gatsby-starter-mate.svg)](https://greenkeeper.io/)
 [![Travis badge](https://api.travis-ci.org/EmaSuriano/gatsby-starter-mate.svg)](https://travis-ci.org/EmaSuriano/gatsby-starter-mate)
 [![eslint](https://img.shields.io/badge/eslint-enabled-green.svg)](https://eslint.org/)
