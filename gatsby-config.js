@@ -47,7 +47,7 @@ module.exports = client.getEntries().then(entries => {
     },
   });
 
-  if (ANALYTICS_ID && false) {
+  if (ANALYTICS_ID) {
     plugins.push({
       resolve: 'gatsby-plugin-google-analytics',
       options: {
