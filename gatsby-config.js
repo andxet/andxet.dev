@@ -2,7 +2,7 @@ const contentful = require('contentful');
 const manifestConfig = require('./manifest-config');
 require('dotenv').config();
 
-const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, COOKIEHUB } = process.env;
+const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, COOKIEHUB, IUBENDA_SITE_ID, COOKIE_POLICY_ID } = process.env;
 
 const client = contentful.createClient({
   space: SPACE_ID,
@@ -57,7 +57,7 @@ module.exports = client.getEntries().then(entries => {
     });
   }
 
-  if (ANALYTICS_ID && COOKIEHUB) {
+  if (ANALYTICS_ID && COOKIEHUB && false) {
     console.log('Activating cookiehub');
     plugins.push({
       resolve: 'gatsby-plugin-cookiehub',
@@ -73,6 +73,20 @@ module.exports = client.getEntries().then(entries => {
         head: false,
         // enable ip anonymization
         anonymize: true,
+      },
+    });
+  }
+
+  if (IUBENDA_SITE_ID && COOKIE_POLICY_ID) {    
+    plugins.push({
+    resolve: 'gatsby-plugin-iubenda-cookie-footer',
+    options: {
+        iubendaOptions: {
+          "lang":"en",
+          "siteId":IUBENDA_SITE_ID,
+          "cookiePolicyId":COOKIE_POLICY_ID, 
+          "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"position":"float-top-center","acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","customizeButtonColor":"#DADADA","customizeButtonCaptionColor":"#4D4D4D","textColor":"black","backgroundColor":"white" },
+        },
       },
     });
   }
