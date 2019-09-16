@@ -2,7 +2,7 @@ const contentful = require('contentful');
 const manifestConfig = require('./manifest-config');
 require('dotenv').config();
 
-const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, COOKIEHUB, IUBENDA_SITE_ID, COOKIE_POLICY_ID } = process.env;
+const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, IUBENDA_SITE_ID, COOKIE_POLICY_ID, PRIVACY_POLICY_LINK } = process.env;
 
 const client = contentful.createClient({
   space: SPACE_ID,
@@ -57,37 +57,28 @@ module.exports = client.getEntries().then(entries => {
     });
   }
 
-  if (ANALYTICS_ID && COOKIEHUB && false) {
-    console.log('Activating cookiehub');
+  if (IUBENDA_SITE_ID && COOKIE_POLICY_ID && PRIVACY_POLICY_LINK) {    
     plugins.push({
-      resolve: 'gatsby-plugin-cookiehub',
+      resolve: 'gatsby-plugin-iubenda-cookie-footer',
       options: {
-        trackingId: ANALYTICS_ID,
-        anonymize: true,
-
-        // your cookiehub widget ID
-        cookihubId: COOKIEHUB,
-        // your google analytics tracking id
-        trackingId: ANALYTICS_ID,
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // enable ip anonymization
-        anonymize: true,
-      },
-    });
-  }
-
-  if (IUBENDA_SITE_ID && COOKIE_POLICY_ID) {    
-    plugins.push({
-    resolve: 'gatsby-plugin-iubenda-cookie-footer',
-    options: {
-        iubendaOptions: {
-          "lang":"en",
-          "siteId":IUBENDA_SITE_ID,
-          "cookiePolicyId":COOKIE_POLICY_ID, 
-          "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"position":"float-top-center","acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","customizeButtonColor":"#DADADA","customizeButtonCaptionColor":"#4D4D4D","textColor":"black","backgroundColor":"white" },
+          iubendaOptions: {
+            "lang":"en",
+            "siteId":IUBENDA_SITE_ID,
+            "cookiePolicyId":COOKIE_POLICY_ID,
+            "cookiePolicyUrl":PRIVACY_POLICY_LINK, 
+            "banner":{ 
+              "acceptButtonDisplay":true,
+              "customizeButtonDisplay":true,
+              "consentOnScroll":false,
+              "position":"float-top-center",
+              "acceptButtonColor":"#0073CE",
+              "acceptButtonCaptionColor":"white",
+              "customizeButtonColor":"#DADADA",
+              "customizeButtonCaptionColor":"#4D4D4D",
+              "textColor":"black",
+              "backgroundColor":"white" },
+          },
         },
-      },
     });
   }
 
