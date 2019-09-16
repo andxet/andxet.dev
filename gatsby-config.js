@@ -85,6 +85,7 @@ module.exports = client.getEntries().then(entries => {
   return {
     siteMetadata: {
       isMediumUserDefined: !!mediumUser,
+      privacyPolicyLink: PRIVACY_POLICY_LINK,
     },
     plugins,
   };

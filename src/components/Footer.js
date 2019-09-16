@@ -27,18 +27,23 @@ const TextFooter = styled(Text)`
 const Footer = () => (
   <StaticQuery
     query={graphql`
-      query FooterQuery {
-        contentfulAbout {
+    query FooterQuery {
+      contentfulAbout {
+        name
+        roles
+        socialLinks {
+          id
+          url
           name
-          roles
-          socialLinks {
-            id
-            url
-            name
-            fontAwesomeIcon
-          }
+          fontAwesomeIcon
         }
       }
+      site {
+        siteMetadata {
+          privacyPolicyLink
+        }
+      }
+    }    
     `}
     render={data => {
       const { name, socialLinks } = data.contentfulAbout;
@@ -48,15 +53,10 @@ const Footer = () => (
           <FooterContainer>
             <Fade left>
               <TextFooter fontSize={[2, 3]}>
-                <span>{`${name}'s Portfolio - Powered by `}</span>
+                <span>{`${name}'s Portfolio - `}</span>
+                <Link href={ data.site.siteMetadata.privacyPolicyLink }>Privacy Policy</Link>
+                <span>{` - Powered by `}</span>
                 <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
-                {/*<span> and </span>
-                <Link href="https://www.contentful.com/" mr={1}>
-                  Contentful
-                </Link>
-                <span role="img" aria-label="heart">
-                  ❤️
-                </span>*/}
               </TextFooter>
             </Fade>
             <Flex>
