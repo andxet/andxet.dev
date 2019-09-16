@@ -75,9 +75,20 @@ const LandingPage = () => (
 
             <Heading
               as="h2"
+              color="primaryLight"
+              fontSize={[4, 5, 6]}
+              mb={[2, 3]}
+              textAlign="center"
+              style={centerHorizontally}
+            >
+              {`and, I'm a`}
+            </Heading>
+
+            <Heading
+              as="h2"
               color="primary"
               fontSize={[4, 5, 6]}
-              mb={[3, 5]}
+              mb={[2, 3]}
               textAlign="center"
               style={centerHorizontally}
             >
@@ -90,6 +101,17 @@ const LandingPage = () => (
                     </Text>
                   ))}
               </TextLoop>
+            </Heading>
+
+            <Heading
+              as="h2"
+              color="primaryLight"
+              fontSize={[4, 5, 6]}
+              mb={[3, 5]}
+              textAlign="center"
+              style={centerHorizontally}
+            >
+              {` developer!`}
             </Heading>
 
             <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
