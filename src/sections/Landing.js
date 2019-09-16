@@ -17,13 +17,13 @@ const Background = () => (
     />
 
     <Triangle
-      color="secondary"
+      color="primaryDark"
       height={['38vh', '80vh']}
       width={['50vw', '35vw']}
     />
 
     <Triangle
-      color="primaryDark"
+      color="secondary"
       height={['25vh', '35vh']}
       width={['75vw', '60vw']}
       invertX
