@@ -29,12 +29,23 @@ const LandingPage = () => {
       <Heading
         as="h2"
         color="primary"
-        fontSize={[5, 6]}
-        mb={[3, 5]}
+        fontSize={[4, 5]}
+        mb={[2, 3]}
         textAlign="center"
         style={centerHorizontally}
       >
-        <TextLoop interval={5000}>
+        {`and, I'm a`}
+      </Heading>
+
+      <Heading
+        as="h2"
+        color="primary"
+        fontSize={[5, 6]}
+        mb={[2, 3]}
+        textAlign="center"
+        style={centerHorizontally}
+      >
+        <TextLoop interval={2000}>
           {roles
             .sort(() => (deterministic ? 1 : Math.random() - 0.5))
             .map((text) => (
@@ -44,6 +55,18 @@ const LandingPage = () => {
             ))}
         </TextLoop>
       </Heading>
+
+      <Heading
+        as="h2"
+        color="primary"
+        fontSize={[4, 5, 6]}
+        mb={[3, 5]}
+        textAlign="center"
+        style={centerHorizontally}
+      >
+        {`developer!`}
+      </Heading>
+
 
       <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
         {socialLinks.map((sl) => (

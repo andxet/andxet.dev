@@ -5,9 +5,11 @@ export const GATSBY_URL = 'https://www.gatsbyjs.org/';
 export const CONTENTFUL_URL = 'https://www.contentful.com/';
 export const NETLIFY_URL = 'https://www.netlify.com/';
 
+export const PRIVACY_POLICY_LINK = 'https://www.iubenda.com/privacy-policy/54318371';
+
 export enum SECTION {
   home = 'Home',
-  about = 'About me',
+  about = 'About',
   projects = 'Projects',
-  writing = 'Writing',
+  //writing = 'Writing',
 }
