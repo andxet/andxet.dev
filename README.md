@@ -1,3 +1,11 @@
+# My personal portfolio website
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c5dcbd22-9afb-44c2-8670-78eca503055f/deploy-status)](https://app.netlify.com/sites/andxet-dev/deploys)
+
+Run with `yarn start`
+
+# Old Mate doc
+
 # Gatsby Starter: Mate 🧉
 
 [![Build](https://github.com/EmaSuriano/gatsby-starter-mate/actions/workflows/master.yml/badge.svg)](https://github.com/EmaSuriano/gatsby-starter-mate/actions/workflows/master.yml)
