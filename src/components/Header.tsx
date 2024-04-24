@@ -6,6 +6,8 @@ import Link from './Link';
 import { useHelmetQuery } from '../queries/useHelmetQuery';
 import { SECTION } from '../utils/constants';
 import { getSectionHref } from '../utils/helpers';
+import Logo from './Logo/andxet.svg'
+
 
 const Header = () => {
   const { profile } = useHelmetQuery();
@@ -21,12 +23,12 @@ const Header = () => {
         <RebassLink href={`#${getSectionHref(SECTION.home)}`} variant="empty">
           <Flex justifyContent="center">
             <Image
-              src={profile.bigIcon.src}
+              src={Logo}
               height={['60px', '80px']}
-              width={['60px', '80px']}
+              width={['130px', '160px']}
               alt="Portfolio Logo"
               p={2}
-              css={{ borderRadius: '20px', cursor: 'pointer' }}
+              css={{ cursor: 'pointer' }}
             />
           </Flex>
         </RebassLink>
