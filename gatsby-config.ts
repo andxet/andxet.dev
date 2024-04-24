@@ -1,5 +1,6 @@
 import type { GatsbyConfig } from 'gatsby';
 import colors from './src/colors.json';
+import { PRIVACY_POLICY_LINK } from './src/utils/constants';
 
 const plugins: GatsbyConfig['plugins'] = [
   'gatsby-plugin-fontawesome-css',
@@ -11,8 +12,8 @@ const plugins: GatsbyConfig['plugins'] = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: 'Mate Portfolio',
-      short_name: 'Mate',
+      name: 'andxet.dev',
+      short_name: 'andxet.dev',
       start_url: '/',
       background_color: colors.background,
       theme_color_in_head: false,
@@ -48,6 +49,33 @@ if (process.env.ANALYTICS_ID) {
     options: { trackingId: process.env.ANALYTICS_ID },
   });
 }
+
+if (process.env.IUBENDA_SITE_ID && process.env.COOKIE_POLICY_ID && PRIVACY_POLICY_LINK) {  
+    console.log("Activating iubenda cookie footer")  
+    plugins.push({
+      resolve: 'gatsby-plugin-iubenda-cookie-footer',
+      options: {
+          iubendaOptions: {
+            "lang":"en",
+            "siteId":process.env.IUBENDA_SITE_ID,
+            "cookiePolicyId":process.env.COOKIE_POLICY_ID,
+            "cookiePolicyUrl":PRIVACY_POLICY_LINK, 
+            "banner":{ 
+              "acceptButtonDisplay":true,
+              "customizeButtonDisplay":true,
+              "consentOnScroll":false,
+              "position":"float-top-center",
+              "acceptButtonColor":"#0073CE",
+              "acceptButtonCaptionColor":"white",
+              "customizeButtonColor":"#DADADA",
+              "customizeButtonCaptionColor":"#4D4D4D",
+              "textColor":"black",
+              "backgroundColor":"white" },
+          },
+        },
+    });
+  }
+
 
 const config: GatsbyConfig = {
   siteMetadata: {
