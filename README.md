@@ -1,19 +1,21 @@
-# Gatsby Starter: Mate
+# My personal portfolio website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c5dcbd22-9afb-44c2-8670-78eca503055f/deploy-status)](https://app.netlify.com/sites/boring-hoover-3a843c/deploys)
-[![Greenkeeper badge](https://badges.greenkeeper.io/EmaSuriano/gatsby-starter-mate.svg)](https://greenkeeper.io/)
-[![Travis badge](https://api.travis-ci.org/EmaSuriano/gatsby-starter-mate.svg)](https://travis-ci.org/EmaSuriano/gatsby-starter-mate)
-[![eslint](https://img.shields.io/badge/eslint-enabled-green.svg)](https://eslint.org/)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Maintainability](https://api.codeclimate.com/v1/badges/c8fc076b30bd493f0cfc/maintainability)](https://codeclimate.com/github/EmaSuriano/gatsby-starter-mate/maintainability)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c5dcbd22-9afb-44c2-8670-78eca503055f/deploy-status)](https://app.netlify.com/sites/andxet-dev/deploys)
 
-![Gatsby Starter Mate logo](./media/gatsby-starter-mate-logo.png)
+Run with `yarn start`
 
-> A portfolio starter for Gatsby integrated with Contentful CMS.
+# Old Mate doc
 
-The target audience are developers 💻 and tech writers ✍️.
+# Gatsby Starter: Mate 🧉
 
-### [Demo Website](https://gatsby-starter-mate.netlify.com/)
+[![Build](https://github.com/EmaSuriano/gatsby-starter-mate/actions/workflows/master.yml/badge.svg)](https://github.com/EmaSuriano/gatsby-starter-mate/actions/workflows/master.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f532a32d-4fc1-441d-aa28-cdc5e2c2e79c/deploy-status)](https://app.netlify.com/sites/gatsby-starter-mate/deploys)
+
+> An accessible and fast portfolio starter for Gatsby integrated with Contentful CMS.
+
+The target audience are Developers 💻 and Tech Writers ✍️.
+
+**[Check the Demo ✨](https://gatsby-starter-mate.netlify.app/)**
 
 ## Why? 🤔
 
@@ -25,28 +27,20 @@ At the same time, as this portfolio is written with Gatsby is extremely easy to 
 
 ## Features 🛠
 
-- [Gatsby v2](https://www.gatsbyjs.org/)
-- [Rebass 3.0 🎉](https://rebassjs.org/): styled component system
-- [React Reveal](https://www.react-reveal.com/)
-- Dynamic content from [Contentful](https://contentful.com)
-- Offline support
+- [Gatsby 5](https://www.gatsbyjs.org/)
+- [Rebass](https://rebassjs.org/): styled component system
+- [React Awesome Reveal](https://github.com/dennismorello/react-awesome-reveal)
+- CMS Integration with [Contentful](https://contentful.com)
 - PWA ready
 - SEO
 - Responsive design
 - Icons from [font-awesome](https://fontawesome.com/)
-- [Netlify](https://www.netlify.com) Deployment Friendly
+- [Netlify](https://www.netlify.com) and [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) Deployment Friendly
 - Medium integration
 - Social sharing (Twitter, Facebook, Google, LinkedIn)
-- Developer tools:
-  - `eslint`
-  - `prettier`
-- Google Analytics
+- Google Analytics integration
 
-### Lighthouse Score 💯
-
-![Lighthouse Score](media/lighthouse-score.png)
-
-## How to start ▶️
+## How to start
 
 As this process needs more steps compared to other starters, I decided to made a tutorial video of how to set up your own instance of Mate. You can follow the video or jump directly to the written documentation.
 
@@ -57,6 +51,13 @@ As this process needs more steps compared to other starters, I decided to made a
 </p>
 
 If you never used Gatsby before, I highly recommend you to [Set up your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)!
+
+Also, it's recommended that you use `Yarn` as your Package Manager inside `gatsby-cli`:
+
+```bash
+$ gatsby options set pm yarn
+info Preferred package manager set to "yarn"
+```
 
 To copy and install this starter run this command:
 
@@ -131,25 +132,25 @@ Finished importing all data
 After this step we can finally run the project and see the result in http://localhost:8000/ 😃
 
 ```bash
-yarn start
+$ yarn start
 ```
 
-## Screenshot and Design 🖼
+## Screenshot and Design
 
 As the starter is a SPA it only has two routes:
 
 - `/`: main page with the sections of `Home`, `About me`, `Projects` and `Writing`.
 - `/404`: error page for unexpected route.
 
-| Section  |           Screenshot            |
-| -------- | :-----------------------------: |
-| Home     |     ![Home](media/home.png)     |
-| About me |  ![About me](media/about.png)   |
-| Projects | ![Projects](media/projects.png) |
-| Writing  |  ![Writing](media/writing.png)  |
-| /404     |      ![404](media/404.png)      |
+| Section  |                 Screenshot                  |
+| -------- | :-----------------------------------------: |
+| Home     |   ![Home](media/screenshots/Landing.png)    |
+| About me |  ![About me](media/screenshots/About.png)   |
+| Projects | ![Projects](media/screenshots/Projects.png) |
+| Writing  |  ![Writing](media/screenshots/Writing.png)  |
+| 404      |      ![404](media/screenshots/404.png)      |
 
-## Building your site 📦
+## Building your site
 
 As we are dealing with environment variables, the `.env` file is excluded from `.gitignore` file. Therefore, in order to deploy the website you have to send `SPACE_ID` and `ACCESS_TOKEN` with the `build` command.
 
@@ -159,87 +160,107 @@ SPACE_ID=xxxxx ACCESS_TOKEN=yyyyy yarn build
 
 The result will be stored inside the `public` folder, so you can upload to your web host. I highly suggest using this starter with Netlify when you can define which command will build the project and also send the environment variables inside the website configuration.
 
-## Adding your information 📝
+## Customization
 
-All the text of this starter live inside Contentful, specifically inside the Content of `About`. In order to change it, just go to `Content` section and change the entity of About with the information you want.
+When you first bootstrap the project, you will notice that it doesn't contain many files. This is because of how the project is structured, for example where is the data coming from and how it is displayed to the user. The starter is based on 2 principles:
+
+1. Data coming from an external source: Contentful. Therefore in case you want to change the content of the website, please refer to [Adding your information section](#adding-your-information).
+2. Components and pages decoupled inside a Gatsby Theme: [gatsby-theme-mate](https://github.com/EmaSuriano/gatsby-theme-mate). The reason behind it is to provide an easy way to keep your starter up to date. To know more about Gatsby Theme, please refer to the [official documentation](https://www.gatsbyjs.com/docs/themes/). Most common customizations:
+   1. [Theming](#theming)
+   2. [Changing Icons](#changing-icons)
+   3. [Modifying the Sections](#modifying-the-sections)
+
+### Adding your information
+
+All the information of this starter resides inside [Contentful](https://www.contentful.com/), inside the Content of `About`. To change it, just go to the `Content` section and change the entity with the information you want.
 
 ![Contentful About change](./media/contentful-about-change.png)
 
-Regarding the projects and social links the process is the same! Contentful is really easy to learn so don't be afraid of breaking everything, remember that you can restore to the start point by running `yarn setup` 😄
+Regarding the projects and social links, the process is the same! Contentful is easy to learn so don't be afraid of breaking everything, remember that you can restore to the start point by running `yarn setup` 😄
 
-## Configuration (Optional) 👷‍♂️
+### Theming
 
-Mate starter is a SPA (Single Page Application), so basically you have only two pages:
+Thanks to the [Theme Shadowing](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/), changing the colors of your portfolio is quite easy! You have to create a new file located at `src/gatsby-theme-mate/colors.json`. Some examples I made by using palettes from [Color Hunt](https://colorhunt.co/):
 
-- `Main.js`: portfolio itself
-- `404.js`: 404 error page with the same style
+| Name     | Code                                                                                                               | Screenshot                                     |
+| -------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------- |
+| Original | `{ "text": "#333333", "background": "#FFFFFF", "muted": "#f0e6f6", "primary": "#7c37ad", "secondary": "#ff4081" }` | ![Original Schema](./media/theme-original.png) |
+| Teal     | `{ "text": "#40514e", "background": "#FFFFFF", "muted": "#e4f9f5", "primary": "#11999e", "secondary": "#30e3ca" }` | ![Teal Theme](./media/theme-teal.png)          |
+| Dark     | `{ "text": "#e3e3e3", "background": "#1b262c", "muted": "#0f4c75", "primary": "#bbe1fa", "secondary": "#3282b8" }` | ![Dark Theme](./media/theme-dark-blue.png)     |
 
-The structure for the main page is the following:
+### Changing Icons
+
+This project is using the icons from [Font Awesome](https://fontawesome.com/), with the implementation made by [fortawesome](https://fortawesome.com/). A good practice when dealing with icons is to load **only** the ones that the project is going to use. Therefore not all the icons inside FA are loaded by default.
+
+To change the icons used in your portfolio, you have to make use of [Theme Shadowing](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) and create a file located at `src/gatsby-theme-mate/icons.js` with your icons. By default this is the content of the file:
 
 ```javascript
-<Layout>
-  <Landing />
-  <About />
-  <Projects />
-  <Writing />
-</Layout>
+import {
+  faMedium,
+  faTwitter,
+  faGithub,
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faGlobe,
+  faEnvelope,
+  faCoffee,
+} from '@fortawesome/free-solid-svg-icons';
+
+export const ICONS = [
+  faMedium,
+  faTwitter,
+  faGithub,
+  faGlobe,
+  faEnvelope,
+  faCoffee,
+];
 ```
 
-`Layout` is the core of the application, it manages the theme for the application, the navigation between sections, also it defines the `header`.
+Simply import the icons you want to use either `@fortawesome/free-brands-svg-icons` or `@fortawesome/free-solid-svg-icons` and export them inside the `ICONS` array. They get loaded as soon as the app starts.
 
-All the components inside `Layout` are `Section` components. A section can have a link inside the `Header` or not, in order to add you need to wrapped the exported `Section` with `withNavigation` HOC and it will be automatically registered (Context magic ✨).
+### Modifying the Sections
 
-## Tracking with Google Analytics (Optional) 📈
+This starter by default provides 4 different sections:
+
+- Landing: your name, roles, and social links.
+- About: information about yourself plus the image on the side.
+- Projects: summary of the projects you worked on.
+- Writing: articles from Medium you wrote (this will be visible only if you specify a Medium user).
+
+In case you want to change the order, remove or even add new sections. You can do it by using the feature of [Theme Shadowing](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) and create a file inside `src/gatsby-theme-mate/templates/Home.js` and have total control over what you want to render. This will be an example of swapping between the About and Projects section.
+
+```jsx
+import React from 'react';
+
+// Layout components
+import Layout from 'gatsby-theme-mate/src/components/Layout';
+import Header from 'gatsby-theme-mate/src/components/Header';
+import Footer from 'gatsby-theme-mate/src/components/Footer';
+
+// Sections that will fetch data for you
+import Landing from 'gatsby-theme-mate/src/sections/Landing';
+import About from 'gatsby-theme-mate/src/sections/About';
+import Projects from 'gatsby-theme-mate/src/sections/Projects';
+import Writing from 'gatsby-theme-mate/src/sections/Writing';
+
+const Home = () => (
+  <Layout>
+    <Header />
+    <Landing />
+    <Projects />
+    <About />
+    <Writing />
+    <Footer />
+  </Layout>
+);
+
+export default Home;
+```
+
+By following this approach it's possible to modify the code of any component of the project. But please be aware, that by using Theme Shadowing you are going to **always override** the content of this, so in case there will be an update of the same file inside `gatsby-theme-mate` you are not going to use it.
+
+My final recommendation with shadowing is to try to keep as minimum as possible to avoid having breaking changes between new releases of the theme.
+
+## Tracking with Google Analytics (Optional)
 
 This starter has the analytics plugin inside the `gatsby-config`, so the only need to do in order to enable it is to provide the `Tracking Id` for your site (starts with `UA-`). Just set a new variable inside your `.env` file called `ANALYTICS_ID` and analytics will be turn on automatically 😄
-
-## Update your Starter (Optional) 💡
-
-In case you cloned this repository before and you want all the latest changes of it, you can execute the following command to update the code in your repository with the one in this repository:
-
-```bash
-# Add repository remote entry
-$ git remote add mate https://github.com/EmaSuriano/gatsby-starter-mate
-
-# Get changes from master branch of gatsby-starter-mate
-$ git pull mate master --allow-unrelated-histories
-
-# Reset changes in unnecessary folder/files
-$ git reset media/ bin/ README.md manifest-config.js
-
-# Remove files affected by the reset
-$ git checkout .
-
-# In this step you might need to fix a lot of conflicts, you can do fix manually or use just accept all the changes from mate
-$ git checkout --theirs .
-
-# WATCH OUT that some configuration can be overwritten in this last step, like package.json, colors, etc. I highly recommend to do an overall look up at the end of fixing the conflicts.
-
-# Install in case there is any new dependency added to the starter
-$ yarn
-
-# Build the project to see if everything is working as expected
-$ yarn build
-```
-
-## Deployment Automation (Optional) ⚙️
-
-Every time you made a change in your Contentful data or you add a new post in Medium you need to trigger a manual deployment, which can be an annoying task. Therefore I found a nice way to make this process automatic and it is by using a tool called Zapier.
-
-This tool will be watching for changes in Contentful and Medium and then trigger a new deploy in Netlify (or the service you are using). In summary, you don't need to care anymore about deploying your application and can focus on writing content or developing features!
-
-In case you want to know more I wrote an article in Medium that explains the whole process especially for this starter 🙌 [Click here to read it.](https://medium.com/@emasuriano/make-any-static-site-dynamic-without-coding-9dde5673b1a)
-
-**UPDATE:** Contentful added a feature to link it with Netlify as a built in option, but in case you are using another provider I recommend going with Zapier!
-
-## Contributing 💪
-
-I came with the idea of creating the starter after the positive feedback I received when I deployed [my website](https://emasuriano.com/). Therefore this starter is not perfect! I tried my best to remove all the personal information, also improve the code to make it easier to understand.
-
-I'm totally open for pull requests with bug fixes, changes in Documentation, or new features to the starter 🙌
-
-Please check the [Contribution guidelines](CONTRIBUTING.md) before opening yours 🙏
-
-## License 📝
-
-MIT.

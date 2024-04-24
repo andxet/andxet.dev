@@ -7,7 +7,7 @@ assessing changes, and helping you finalize your pull requests.
 
 ## Where do I go from here?
 
-If you've noticed a bug or have a feature request, search the [issue tracker](https://github.com/EmaSuriano/gatsby-starter-mate/issues?q=something) to see if someone else in the community has already created a ticket. If not, go ahead and make one!
+If you've noticed a bug or have a feature request, search the [issue tracker](https://github.com/EmaSuriano/gatsby-theme-mate/issues?q=something) to see if someone else in the community has already created a ticket. If not, go ahead and make one!
 
 ## Fork & create a branch
 
@@ -48,4 +48,4 @@ Example: `feat/new-top-bar` or `fix/broken-project-link`
 
 5. Submit a pull request through the GitHub website.
 
-After the pull request is submitted TravisCI is going to run all the automated tasks that ensure a minimium code quality. **This is a mandatory requirement in order to merge your pul request.**
+After the pull request is submitted TravisCI is going to run all the automated tasks that ensure a minimum code quality. **This is a mandatory requirement in order to merge your pull request.**
