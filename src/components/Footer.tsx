@@ -5,7 +5,7 @@ import { Fade } from 'react-awesome-reveal';
 import SocialLink from './SocialLink';
 import Link from './Link';
 import { useSiteQuery } from '../queries/useSiteQuery';
-import { CONTENTFUL_URL, GATSBY_URL, NETLIFY_URL, PRIVACY_POLICY_LINK } from '../utils/constants';
+import { GATSBY_URL, PRIVACY_POLICY_LINK } from '../utils/constants';
 
 const Footer = () => {
   const { name, socialLinks } = useSiteQuery();
