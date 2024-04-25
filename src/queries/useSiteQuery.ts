@@ -10,11 +10,12 @@ type QueryResponse = {
   site: {
     siteMetadata: {
       deterministic: boolean;
+      logo: string
     };
   };
 };
 
-export const useSiteQuery = (): Landing & { deterministic: boolean } => {
+export const useSiteQuery = (): Landing & { deterministic: boolean, logo: string } => {
   const { contentfulAbout, site } = useStaticQuery<QueryResponse>(graphql`
     query SiteQuery {
       contentfulAbout {
@@ -29,6 +30,7 @@ export const useSiteQuery = (): Landing & { deterministic: boolean } => {
       site {
         siteMetadata {
           deterministic
+          logo
         }
       }
     }

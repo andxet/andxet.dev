@@ -3,14 +3,12 @@ import Headroom from 'react-headroom';
 import { Box, Link as RebassLink, Flex, Image } from 'rebass/styled-components';
 import styled from 'styled-components';
 import Link from './Link';
-import { useHelmetQuery } from '../queries/useHelmetQuery';
 import { SECTION } from '../utils/constants';
 import { getSectionHref } from '../utils/helpers';
-import Logo from './Logo/andxet.svg'
-
+import { useSiteQuery } from '../queries/useSiteQuery';
 
 const Header = () => {
-  const { profile } = useHelmetQuery();
+  const { logo } = useSiteQuery();  
 
   return (
     <StyledHeadroom>
@@ -23,7 +21,7 @@ const Header = () => {
         <RebassLink href={`#${getSectionHref(SECTION.home)}`} variant="empty">
           <Flex justifyContent="center">
             <Image
-              src={Logo}
+              src={logo}
               height={['60px', '80px']}
               width={['130px', '160px']}
               alt="Portfolio Logo"
@@ -34,7 +32,8 @@ const Header = () => {
         </RebassLink>
         <Flex mr={[0, 3, 5]}>
           {(Object.keys(SECTION) as Array<keyof typeof SECTION>)
-            .filter((id) => id !== 'home')
+            .filter((id) =>  id !== 'home' )
+            .filter((id) =>  id !== 'writing' )
             .map((id) => (
               <Box key={id} ml={[2, 3]} color="background" fontSize={[2, 3]}>
                 <Link href={`#${id}`} tabIndex={0}>

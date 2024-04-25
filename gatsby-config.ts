@@ -80,6 +80,7 @@ if (process.env.IUBENDA_SITE_ID && process.env.COOKIE_POLICY_ID && PRIVACY_POLIC
 const config: GatsbyConfig = {
   siteMetadata: {
     deterministic: false,
+    logo: 'logo.svg'
   },
   plugins,
 };
