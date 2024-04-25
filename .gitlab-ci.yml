@@ -7,6 +7,8 @@ build:
   
   script:
     - yarn install --frozen-lockfile
+    - yarn check-types
+    - yarn lint
     - yarn build
   artifacts:
     paths:
