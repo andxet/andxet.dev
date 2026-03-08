@@ -10,7 +10,8 @@
     "clean": "gatsby clean",
     "setup": "ts-node -O '{\"module\":\"commonjs\"}' ./bin/setup.ts",
     "check-types": "tsc --noEmit",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "dump": "env-cmd --silent ts-node -O '{\"module\":\"commonjs\"}' ./bin/dump-contentful.ts"
   },
   "repository": {
     "type": "git",
