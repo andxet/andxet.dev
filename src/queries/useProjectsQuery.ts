@@ -1,54 +1,56 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { Project } from '../types';
 
-export type QueryResponse = {
-  contentfulAbout: {
-    projects: {
-      id: string;
-      name: string;
-      description: string;
-      homepage: string;
-      repository: string;
-      publishedDate: string;
-      type: string;
-      logo: {
-        title: string;
-        image: {
-          src: string;
-        };
+type QueryResponse = {
+  allMarkdownRemark: {
+    nodes: {
+      frontmatter: {
+        name: string;
+        type: string;
+        date: string;
+        projectUrl: string;
+        repositoryUrl: string;
+        logo: string;
+        published: boolean;
       };
+      excerpt: string;
     }[];
   };
 };
 
 export const useProjectsQuery = (): Project[] => {
-  const { contentfulAbout } = useStaticQuery<QueryResponse>(graphql`
+  const { allMarkdownRemark } = useStaticQuery<QueryResponse>(graphql`
     query ProjectsQuery {
-      contentfulAbout {
-        projects {
-          id
-          name
-          description
-          homepage: projectUrl
-          repository: repositoryUrl
-          publishedDate(formatString: "YYYY")
-          type
-          logo {
-            title
-            image: resize(width: 200, quality: 100) {
-              src
-            }
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/content/projects/" }, frontmatter: { published: { eq: true } } }
+        sort: { frontmatter: { date: DESC } }
+      ) {
+        nodes {
+          frontmatter {
+            name
+            type
+            date(formatString: "YYYY")
+            projectUrl
+            repositoryUrl
+            logo
+            published
           }
+          excerpt(pruneLength: 200)
         }
       }
     }
   `);
 
-  return contentfulAbout.projects.map(({ logo, ...rest }) => ({
-    ...rest,
+  return allMarkdownRemark.nodes.map(({ frontmatter, excerpt }) => ({
+    name: frontmatter.name,
+    type: frontmatter.type,
+    publishedDate: frontmatter.date,
+    homepage: frontmatter.projectUrl,
+    repository: frontmatter.repositoryUrl,
+    description: excerpt,
     logo: {
-      alt: logo.title,
-      src: logo.image.src,
+      alt: frontmatter.name,
+      src: frontmatter.logo,
     },
   }));
 };

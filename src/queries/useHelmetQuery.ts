@@ -2,41 +2,37 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Favicon } from '../types';
 
 type QueryResponse = {
-  contentfulAbout: {
-    name: string;
-    description: string;
-    profile: {
-      favicon16: Favicon;
-      favicon32: Favicon;
-      bigIcon: Favicon;
-      appleIcon: Favicon;
+  aboutMd: {
+    frontmatter: {
+      name: string;
+      description: string;
+      profile: string;
     };
   };
 };
 
-export const useHelmetQuery = () => {
-  const { contentfulAbout } = useStaticQuery<QueryResponse>(graphql`
+export const useHelmetQuery = (): { name: string; description: string; profile: { favicon16: Favicon; favicon32: Favicon; bigIcon: Favicon; appleIcon: Favicon } } => {
+  const { aboutMd } = useStaticQuery<QueryResponse>(graphql`
     query HelmetQuery {
-      contentfulAbout {
-        name
-        description
-        profile {
-          favicon16: resize(width: 16) {
-            src
-          }
-          favicon32: resize(width: 32) {
-            src
-          }
-          bigIcon: resize(width: 192) {
-            src
-          }
-          appleIcon: resize(width: 180) {
-            src
-          }
+      aboutMd: markdownRemark(fileAbsolutePath: { regex: "/content/about/" }) {
+        frontmatter {
+          name
+          description
+          profile
         }
       }
     }
   `);
 
-  return contentfulAbout;
+  const { name, description, profile } = aboutMd.frontmatter;
+  return {
+    name,
+    description,
+    profile: {
+      favicon16: { src: profile },
+      favicon32: { src: profile },
+      bigIcon: { src: profile },
+      appleIcon: { src: profile },
+    },
+  };
 };

@@ -73,7 +73,8 @@
       "date": "2026-02-02T00:00+02:00",
       "description": "Unannounced game. News soon",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/4As0eTgHLns7e7FzxxHOe0/f84e2543751b54da3c3ef2e6a7096288/Question_mark__black_.svg.png",
-      "published": false
+      "published": false,
+      "_logoFile": "/images/projects/unannounced-game-broken-arms-games.png"
     },
     {
       "name": "Hackerino save the world @ GGJ",
@@ -83,7 +84,8 @@
       "repositoryUrl": "https://youtu.be/ox3RpTMm2SA",
       "projectUrl": "https://globalgamejam.org/games/2026/hackerino-saves-world-5",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/31EfxERSNimedKw1OI3KyI/40e2ea13f8a303eb372a41ac3317957b/ffe5146467f09064d764507dd13f723f5c122c85.png",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/hackerino-save-the-world-ggj.png"
     },
     {
       "name": "Bubble Cat @ GGJ",
@@ -92,7 +94,8 @@
       "description": "Join a playful cat on a vertical endless runner adventure as it chases a red balloon! Developes at Global Game JAm 2025",
       "projectUrl": "https://globalgamejam.org/games/2025/bubble-cat-3-2",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/4a2MiSx85pXXOWCZfC6ZfU/74a009f5091971d57cb87c0c2230fe8e/ffe5146467f09064d764507dd13f723f5c122c85.png",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/bubble-cat-ggj.png"
     },
     {
       "name": "Unannounced Game @ Broken Arms Games",
@@ -101,7 +104,8 @@
       "description": "Unannounced game. News soon",
       "projectUrl": "https://www.brokenarmsgames.com/",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/4As0eTgHLns7e7FzxxHOe0/f84e2543751b54da3c3ef2e6a7096288/Question_mark__black_.svg.png",
-      "published": false
+      "published": false,
+      "_logoFile": "/images/projects/unannounced-game-broken-arms-games.png"
     },
     {
       "name": "Avatar Frotiers of Pandora @ Ubisoft",
@@ -110,7 +114,8 @@
       "description": "The Ubisoft's game of the Avatar Movie!",
       "projectUrl": "https://www.ubisoft.com/it-it/game/avatar/frontiers-of-pandora",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/15Q5oq6j8lmbUo3P4W6FN7/724045b18093f53dcf3060da1f85987a/thumb-1920-1318037.jpeg",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/avatar-frotiers-of-pandora-ubisoft.jpeg"
     },
     {
       "name": "San Martino's quest",
@@ -120,7 +125,8 @@
       "repositoryUrl": "https://github.com/andxet/san-martino-quest",
       "projectUrl": "https://andxet.itch.io/san-martino-quest",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/1NO5NutnMGUh5GQnzfXXYe/8f8abdd42a25922c9a3781a0761af6c6/screen.jpg",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/san-martino-s-quest.jpg"
     },
     {
       "name": "Memetation @ GGJ",
@@ -130,7 +136,8 @@
       "repositoryUrl": "https://github.com/NanoVeganShark/GGJ2024",
       "projectUrl": "https://globalgamejam.org/games/2024/nanovegansharks-game-2",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/1bvOnO9qv932T70VhlzrCD/8af526c3810c05ca38c6644e459ac614/Screenshot_2024-01-28_at_16.44.01.jpg",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/memetation-ggj.jpg"
     },
     {
       "name": "Under Par @ Broken Arms Games",
@@ -139,7 +146,8 @@
       "description": "Design world-class golf courses by terraforming rough wasteland into lush fairways for smooth drives and pristine greens to ensure a true roll for every putt.",
       "projectUrl": "https://store.steampowered.com/app/2928410/Under_Par_Golf_Architect/?l=italian",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/791N65IEWk5J2L5y3t3fF6/6bdf5ebe8640d222d84570e5da92437a/under-par-button-1741194854643.jpg",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/under-par-broken-arms-games.jpg"
     },
     {
       "name": "Rocksmith+ @ Ubisoft",
@@ -148,7 +156,8 @@
       "description": "Learn to play guitar and bass!",
       "projectUrl": "https://www.ubisoft.com/it-it/game/rocksmith/plus",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/1OhGQPMSXcO4vX9zOwuWTq/369631d0b23f6dde5f7657527cb51b7b/E32mRVfXIAQTFWt.jpeg",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/rocksmith-ubisoft.jpeg"
     },
     {
       "name": "Mario+Rabbids Sparks of Hope @Ubisoft",
@@ -157,7 +166,8 @@
       "description": "My first AAA game as Gameplay Programmer!",
       "projectUrl": "https://www.ubisoft.com/en-gb/game/mario-rabbids/sparks-of-hope",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/50fsjWibOGLE2p1al6BIUM/afc15514160749f28d90ebeb8dbe4672/mario-rabbids-sparks-of-hope_ywu4.jpg",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/mario-rabbids-sparks-of-hope-ubisoft.jpg"
     },
     {
       "name": "Fireflies @ GGJ",
@@ -166,7 +176,8 @@
       "description": "An online competitive multiplayer game where you and your friends are druids looking for your Soul Wisp in the Lys Forest.",
       "projectUrl": "https://globalgamejam.org/2021/games/firefly-guidance-0",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/4xDIWd4n7HKk882FHt37jQ/c33e33fcc81592d7faab3a17deab5539/splashscreenforgg.png",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/fireflies-ggj.png"
     },
     {
       "name": "Dreamcatcher @ Zuru Tech",
@@ -175,7 +186,8 @@
       "description": "Project and create real buildings",
       "projectUrl": "https://zuru.tech/design",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/5duQecIXg2lc4vyGHpYj2V/b8e0738fecf337c236b929b5ab9942bb/zuru-logo-black.png",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/dreamcatcher-zuru-tech.png"
     },
     {
       "name": "Make the wall great again @ GGJ",
@@ -184,7 +196,8 @@
       "description": "Destroy the wall with the cannon, or try to repair it. A hilarious multiplayer game developed during the Global Game Jam 2020.",
       "projectUrl": "https://globalgamejam.org/2020/games/make-wall-great-again-2",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/7HzUVU69Jpnysspti625ak/03d1ac22eb6026656ba07074557dd85b/sc1.png",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/make-the-wall-great-again-ggj.png"
     },
     {
       "name": "Last Standing BERNARDO @ GGJ",
@@ -193,7 +206,8 @@
       "description": "A brawl game about hermit crabs that fight each other to dominate the beach.",
       "projectUrl": "https://globalgamejam.org/2019/games/last-standing-bernardo?token=1568462277",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/74rrHq7JF1qtmtv6cB5JGj/3d6d2b290d963fe185c52c84181ee85e/Schermata_2019-09-14_alle_14.07.08.png",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/last-standing-bernardo-ggj.png"
     },
     {
       "name": "ConnHex Website",
@@ -203,7 +217,8 @@
       "repositoryUrl": "https://github.com/ConnHex/connhex.github.io",
       "projectUrl": "https://connhex.github.io/",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/39I5GFGLZxPUOAbZcTbf3P/56c92dd86411a51abeb69898ab54b397/Schermata_2019-09-14_alle_13.09.58.png",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/connhex-website.png"
     },
     {
       "name": "ConnHex @ GGJ",
@@ -213,7 +228,8 @@
       "repositoryUrl": "https://globalgamejam.org/2018/games/connhex",
       "projectUrl": "https://connhex.github.io/",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/RPNNT3JsS455TyBlQlOLy/5e1975a960ad512570def87f83738b92/splash_screen_connhex.png",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/connhex-ggj.png"
     },
     {
       "name": "Super Powerwave Mega Arena Ultra Heroes @ GGJ",
@@ -223,7 +239,8 @@
       "repositoryUrl": "https://github.com/andxet/ggj17",
       "projectUrl": "https://globalgamejam.org/2017/games/super-powerwave-mega-arena-ultra-heroes",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/2ProJMI5Q6K2cc6PViIgBB/834116c33cff6726fca97cd9705f3954/COVER.jpg",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/super-powerwave-mega-arena-ultra-heroes-.jpg"
     },
     {
       "name": "JPong",
@@ -232,7 +249,8 @@
       "description": "A clone of Pong developed in Java.",
       "repositoryUrl": "https://github.com/andxet/jpong",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/2jUcOt3vZu9zM4arwSzmG2/694b148abd0ae754244a971263062241/logo.gif",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/jpong.gif"
     },
     {
       "name": "Air Race",
@@ -242,7 +260,8 @@
       "repositoryUrl": "https://github.com/andxet/highschool-air-race",
       "projectUrl": "https://github.com/andxet/highschool-air-race/releases",
       "logo": "https://images.ctfassets.net/99wz9ct4ux7s/3Cbmc6gspxyYfMKGavTb2D/ea6bac84906dd78b30ba3be6e96a2f39/Logo.jpg",
-      "published": true
+      "published": true,
+      "_logoFile": "/images/projects/air-race.jpg"
     }
   ]
 }

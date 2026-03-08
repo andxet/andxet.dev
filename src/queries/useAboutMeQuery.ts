@@ -1,48 +1,34 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { AboutMe } from '../types';
 
-export type QueryResponse = {
-  contentfulAbout: {
-    aboutMe: {
-      childMarkdownRemark: {
-        rawMarkdownBody: string;
-      };
-    };
-    profile: {
-      title: string;
-      image: {
-        src: string;
-      };
+type QueryResponse = {
+  aboutMd: {
+    rawMarkdownBody: string;
+    frontmatter: {
+      name: string;
+      profile: string;
     };
   };
 };
 
 export const useAboutMeQuery = (): AboutMe => {
-  const {
-    contentfulAbout: { aboutMe, profile },
-  } = useStaticQuery<QueryResponse>(graphql`
+  const { aboutMd } = useStaticQuery<QueryResponse>(graphql`
     query AboutMeQuery {
-      contentfulAbout {
-        aboutMe {
-          childMarkdownRemark {
-            rawMarkdownBody
-          }
-        }
-        profile {
-          title
-          image: resize(width: 450, quality: 100) {
-            src
-          }
+      aboutMd: markdownRemark(fileAbsolutePath: { regex: "/content/about/" }) {
+        rawMarkdownBody
+        frontmatter {
+          name
+          profile
         }
       }
     }
   `);
 
   return {
-    markdown: aboutMe.childMarkdownRemark.rawMarkdownBody,
+    markdown: aboutMd.rawMarkdownBody,
     profile: {
-      alt: profile.title,
-      src: profile.image.src,
+      alt: aboutMd.frontmatter.name,
+      src: aboutMd.frontmatter.profile,
     },
   };
 };

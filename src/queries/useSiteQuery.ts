@@ -2,29 +2,33 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Landing, SocialLink } from '../types';
 
 type QueryResponse = {
-  contentfulAbout: {
-    name: string;
-    roles: string[];
-    socialLinks: SocialLink[];
+  aboutMd: {
+    frontmatter: {
+      name: string;
+      roles: string[];
+      socialLinks: SocialLink[];
+    };
   };
   site: {
     siteMetadata: {
       deterministic: boolean;
-      logo: string
+      logo: string;
     };
   };
 };
 
-export const useSiteQuery = (): Landing & { deterministic: boolean, logo: string } => {
-  const { contentfulAbout, site } = useStaticQuery<QueryResponse>(graphql`
+export const useSiteQuery = (): Landing & { deterministic: boolean; logo: string } => {
+  const { aboutMd, site } = useStaticQuery<QueryResponse>(graphql`
     query SiteQuery {
-      contentfulAbout {
-        name
-        roles
-        socialLinks {
-          url
+      aboutMd: markdownRemark(fileAbsolutePath: { regex: "/content/about/" }) {
+        frontmatter {
           name
-          icon: fontAwesomeIcon
+          roles
+          socialLinks {
+            url
+            name
+            icon
+          }
         }
       }
       site {
@@ -36,5 +40,5 @@ export const useSiteQuery = (): Landing & { deterministic: boolean, logo: string
     }
   `);
 
-  return { ...contentfulAbout, ...site.siteMetadata };
+  return { ...aboutMd.frontmatter, ...site.siteMetadata };
 };

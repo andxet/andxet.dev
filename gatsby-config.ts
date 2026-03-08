@@ -22,10 +22,17 @@ const plugins: GatsbyConfig['plugins'] = [
     },
   },
   {
-    resolve: 'gatsby-source-contentful',
+    resolve: 'gatsby-source-filesystem',
     options: {
-      accessToken: process.env.ACCESS_TOKEN,
-      spaceId: process.env.SPACE_ID,
+      name: 'content',
+      path: `${__dirname}/content`,
+    },
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'images',
+      path: `${__dirname}/static/images`,
     },
   },
   {
