@@ -22,16 +22,23 @@ SPACE_ID=xxxxx ACCESS_TOKEN=yyyyy yarn build
 ## Environment Variables
 
 Create a `.env` file at the root (excluded from git):
-- `SPACE_ID` — Contentful space ID (required)
-- `ACCESS_TOKEN` — Contentful Content Delivery API token (required)
+- `SPACE_ID` — Contentful space ID (only needed for `yarn dump` or if re-enabling Contentful)
+- `ACCESS_TOKEN` — Contentful Delivery API token (only needed for `yarn dump` or if re-enabling Contentful)
+- `DRAFT_INCLUDED_ACCESS_TOKEN` — Contentful Preview API token (only needed for `yarn dump`)
 - `ANALYTICS_ID` — Google Analytics tracking ID (optional, enables analytics plugin)
 - `IUBENDA_SITE_ID` + `COOKIE_POLICY_ID` — iubenda cookie banner (optional, both required together)
 
 ## Architecture
 
-This is a personal portfolio site built with **Gatsby 5** + **TypeScript**, using **Contentful** as the headless CMS. All content (name, roles, social links, projects, about text) lives in Contentful — not in code.
+This is a personal portfolio site built with **Gatsby 5** + **TypeScript**. Content is stored as local Markdown files in `content/`; images are in `static/images/`.
 
-**Data flow:** Contentful → GraphQL (via `gatsby-source-contentful`) → custom hooks in `src/queries/` → section components
+**Data flow:** Markdown files (`content/`) → GraphQL (via `gatsby-source-filesystem` + `gatsby-transformer-remark`) → custom hooks in `src/queries/` → section components
+
+**Content files:**
+- `content/about.md` — name, roles, social links, about text, profile image path
+- `content/projects/*.md` — one file per project; filename format `YYYY-MM-DD-slug.md`; `published: false` hides the project
+
+**Re-enabling Contentful:** `gatsby-source-contentful` is still installed. See README for instructions.
 
 **Key directories:**
 - `src/sections/` — Page sections: `Landing`, `About`, `Projects`, `Writing` (Writing is currently excluded from the homepage)

@@ -4,6 +4,41 @@
 
 Run with `yarn start`
 
+## Data source: local Markdown files
+
+Content (about, projects) is stored in `content/` as Markdown files with YAML frontmatter. Images are in `static/images/`. No external CMS is required to build the site.
+
+To back up content from Contentful (requires `.env` with `SPACE_ID` and `DRAFT_INCLUDED_ACCESS_TOKEN`):
+
+```bash
+yarn dump
+```
+
+## Re-enabling Contentful
+
+`gatsby-source-contentful` is still installed. To switch back to Contentful as the data source:
+
+1. Add the plugin back to `gatsby-config.ts`:
+
+```ts
+{
+  resolve: 'gatsby-source-contentful',
+  options: {
+    spaceId: process.env.SPACE_ID,
+    accessToken: process.env.ACCESS_TOKEN,
+  },
+},
+```
+
+2. Set the env vars in `.env`:
+
+```
+SPACE_ID=your_space_id
+ACCESS_TOKEN=your_delivery_api_token
+```
+
+3. Restore the original GraphQL queries in `src/queries/` to use `contentfulAbout` and `allContentfulProject` instead of `markdownRemark`.
+
 # Old Mate doc
 
 # Gatsby Starter: Mate 🧉
