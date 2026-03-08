@@ -11,7 +11,9 @@ exports.sourceNodes = async (gatsbyConfig, themeOptions) => {
 
   const { items } = await client.getEntries();
   const about = items.find(getAbout);
-  const { mediumUser = '@medium' } = about.fields;
+  const { mediumUser } = about.fields;
+
+  if (!mediumUser) return;
 
   await gatsbySourceMedium.sourceNodes(gatsbyConfig, { username: mediumUser });
 };
